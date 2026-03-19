@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 import type { Book } from "../types/book";
+import { getCoverUrl } from "../utils/format";
 
 interface BookCardProps {
   book: Book;
-}
-
-function getCoverUrl(coverId: number | undefined): string | null {
-  if (!coverId) return null;
-  return `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`;
 }
 
 /**
